@@ -4,6 +4,11 @@
 
 ### **Live Deployment Link : [VedaAI Production App](https://vedaai-frontend-p6wf.onrender.com)**
 
+### **🔑 Demo Login Credentials**
+* **Email**: `adityajoshi@gmail.com`
+* **Password**: `Aditya123456`
+* **Name**: `Aditya Joshi`
+
 ---
 
 ### **1. GitHub Repo**
