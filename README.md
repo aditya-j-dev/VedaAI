@@ -1,6 +1,4 @@
-# **Submission**
 
-### **Submission Link : [Submit here](https://docs.google.com/forms/d/e/1FAIpQLSeL19GVvVT8vZrTx67hMWKTXLyJSyhkW5XGyzh7Ppt5w8P1jw/viewform?usp=dialog)**
 
 ### **Live Deployment Link : [VedaAI Production App](https://vedaai-frontend-p6wf.onrender.com)**
 
