@@ -9,4 +9,3 @@ dist/
 Thumbs.db
 coverage/
 *.tsbuildinfo
-pnpm-lock.yaml
