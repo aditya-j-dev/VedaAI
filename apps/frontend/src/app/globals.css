@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #f0f0f0;
+    color: #2f2f2f;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #dddddd;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a9a9a9;
+  }
+}
+
+@layer components {
+  /* Sidebar nav item active */
+  .nav-item-active {
+    @apply bg-nav-active rounded-nav;
+  }
+
+  /* Dark pill button (primary CTA) */
+  .btn-dark {
+    @apply h-[46px] px-6 bg-dark rounded-pill flex items-center gap-2 
+           text-white font-medium text-base transition-all duration-200
+           hover:bg-[#2a2a2a] active:scale-95;
+  }
+
+  /* Outline pill button */
+  .btn-outline {
+    @apply h-[46px] px-6 bg-white border border-border-light rounded-pill 
+           flex items-center gap-2 text-primary font-medium text-base 
+           transition-all duration-200 hover:bg-bg-input active:scale-95;
+  }
+
+  /* Input field */
+  .input-field {
+    @apply w-full h-12 px-4 bg-bg-input border border-border-input rounded-sm 
+           text-sm text-primary outline-none transition-colors duration-200
+           placeholder:text-faint focus:border-faint;
+  }
+
+  /* Card container */
+  .card {
+    @apply bg-white rounded-2xl border border-border-input shadow-card;
+  }
+
+  /* Form card */
+  .form-card {
+    @apply bg-white rounded-form p-8;
+  }
+
+  /* Progress bar segment */
+  .progress-bar {
+    @apply h-1.5 bg-border-input rounded-full overflow-hidden;
+  }
+
+  /* Orange notification badge */
+  .badge-orange {
+    @apply bg-orange text-white text-[11px] font-semibold rounded-circle 
+           px-1.5 py-0.5 min-w-[18px] text-center leading-none;
+  }
+}
+
+@layer utilities {
+  /* Frosted glass effect */
+  .glass {
+    @apply bg-white/75 backdrop-blur-md;
+  }
+
+  /* Orange glow ring for create button */
+  .ring-orange-glow {
+    box-shadow: 0 0 0 2px rgba(255, 86, 35, 0.5), 0 0 12px rgba(255, 86, 35, 0.2);
+  }
+
+  /* Subtle hover lift */
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-0.5;
+  }
+
+  /* Overlay backdrop */
+  .overlay-backdrop {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center;
+  }
+}
+
+/* Generation overlay progress bar animation */
+@keyframes progress-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.progress-pulse {
+  animation: progress-pulse 1.5s ease-in-out infinite;
+}
+
+/* Spinning loader */
+@keyframes spin-loader {
+  to { transform: rotate(360deg); }
+}
+
+.spin-loader {
+  animation: spin-loader 0.8s linear infinite;
+}
