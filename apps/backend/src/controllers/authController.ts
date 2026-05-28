@@ -55,7 +55,7 @@ passport.use(
 const COOKIE_OPTIONS = {
   httpOnly: true,
   secure: env.NODE_ENV === 'production',
-  sameSite: 'lax' as const,
+  sameSite: env.NODE_ENV === 'production' ? ('none' as const) : ('lax' as const),
   maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
 };
 
@@ -170,7 +170,7 @@ export async function emailLogin(req: Request, res: Response, next: NextFunction
 
 // ─── POST /api/auth/logout ────────────────────────────────────────────────────
 export function logout(_req: Request, res: Response): void {
-  res.clearCookie('vedaai_token', { httpOnly: true, sameSite: 'lax' });
+  res.clearCookie('vedaai_token', COOKIE_OPTIONS);
   res.json({ success: true, message: 'Logged out' });
 }
 
