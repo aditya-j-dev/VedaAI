@@ -2,10 +2,13 @@
 
 ### **Submission Link : [Submit here](https://docs.google.com/forms/d/e/1FAIpQLSeL19GVvVT8vZrTx67hMWKTXLyJSyhkW5XGyzh7Ppt5w8P1jw/viewform?usp=dialog)**
 
+### **Live Deployment Link : [VedaAI Production App](https://vedaai-1w09.onrender.com)**
+
 ---
 
 ### **1. GitHub Repo**
 
+- **GitHub Repository**: [https://github.com/aditya-j-dev/VedaAI](https://github.com/aditya-j-dev/VedaAI)
 - **Clean Code**: 
   - Organized as a production-ready **PNPM Monorepo** ensuring high modularity and explicit dependency management.
   - Strict TypeScript configuration with shared types, interfaces, and schemas located in [packages/shared](file:///d:/veda/vedaai/packages/shared) to avoid code duplication between frontend and backend.
